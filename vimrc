@@ -4,6 +4,8 @@ set cursorline
 
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 
 colorscheme elflord 
 
@@ -16,3 +18,6 @@ set expandtab
 filetype indent on
 
 set showmatch
+
+set encoding=utf-8
+
