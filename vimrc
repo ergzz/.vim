@@ -32,3 +32,7 @@ set path+=**
 set wildmenu
 
 command! Maketags !ctags -R .
+
+"latex w/o plugins
+map <F3> :!pdflatex %<CR><CR>
+map <F4> :!mupdf %<.pdf &<CR><CR>
