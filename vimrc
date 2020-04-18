@@ -8,7 +8,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
-colorscheme elflord 
+colorscheme monokai
 
 syntax enable
 filetype plugin on
@@ -19,6 +19,7 @@ set tabstop=4
 set softtabstop=4
 set expandtab 
 filetype indent on
+set autoindent
 
 set showmatch
 
@@ -31,6 +32,7 @@ set encoding=utf-8
 set path+=**
 set wildmenu
 
+" not a real use for tags yet
 command! Maketags !ctags -R .
 
 "latex w/o plugins
