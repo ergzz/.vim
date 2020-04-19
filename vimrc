@@ -1,4 +1,5 @@
 set nocompatible
+filetype off
 set nu
 set showcmd
 set cursorline
@@ -12,7 +13,7 @@ colorscheme monokai
 
 syntax enable
 filetype plugin on
-
+set omnifunc=syntaxcomplete#Complete
 map <F2> :bprev<CR>
 
 set tabstop=4
@@ -38,3 +39,10 @@ command! Maketags !ctags -R .
 "latex w/o plugins
 map <F3> :!pdflatex %<CR><CR>
 map <F4> :!mupdf %<.pdf &<CR><CR>
+
+"plugins
+
+call plug#begin('~/.vim/plugged')
+Plug 'lervag/vimtex'
+call plug#end()
+
