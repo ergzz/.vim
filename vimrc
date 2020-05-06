@@ -43,6 +43,6 @@ map <F4> :!mupdf %<.pdf &<CR><CR>
 "plugins
 
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/lervag/vimtex.git'
+Plug 'lervag/vimtex'
 call plug#end()
 
