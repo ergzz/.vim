@@ -9,7 +9,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
-colorscheme monokai
+colorscheme atom-dark-256
 
 syntax enable
 filetype plugin on
@@ -44,5 +44,9 @@ map <F4> :!mupdf %<.pdf &<CR><CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/lervag/vimtex.git'
+Plug 'sirver/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 call plug#end()
 
