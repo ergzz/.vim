@@ -28,16 +28,102 @@ snippet template "Basic Template"
 \hypersetup{citecolor = blue}
 \hypersetup{urlcolor = black}
 
+\usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{
+style=mystyle,
+inputencoding=utf8,
+literate=%
+    {é}{{\'e}}{1}%
+    {è}{{\`e}}{1}%
+    {à}{{\`a}}{1}%
+}
 
 \begin{document}
 	$0
 \end{document}
 endsnippet
+
+snippet cover "Cover page for report"
+\begin{center}
+\includegraphics[scale=0.2]{/home/eva/Images/unilogo}
+
+\vspace{10mm}
+
+{\large Bachelor en mathématiques}
+
+\vspace{5mm}
+
+{\large ${1:subject}}
+
+\vspace{5mm}
+
+{\large ${2:date}}
+
+\vspace{5mm}
+
+\rule{\linewidth}{0.5mm}
+
+\vspace{4mm}
+
+{\huge \textbf{${3:title}}}
+
+\vspace{4mm}
+
+\rule{\linewidth}{0.5mm} 
+
+\vspace{15mm}
+
+\large
+\emph{Auteur:}
+
+\vspace{1mm}
+
+Eva \textsc{Ragazzini} 
+
+\vspace{15mm}
+
+\emph{Superviseurs:}
+\end{center}
+
+\normalsize 
+
+
+\newpage
+endsnippet
+
 
 snippet beg "begin{} / end{}"
 \\begin{$1}
@@ -124,4 +210,9 @@ endsnippet
 context "math()"
 snippet >= "geq"
 \geq
+endsnippet
+
+context "math()"
+snippet // "fraction"
+\\frac{$1}{$2}$0
 endsnippet
