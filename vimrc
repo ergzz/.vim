@@ -1,31 +1,32 @@
 "configuration
-set nocompatible
-filetype off
-set nu
-set showcmd
-set cursorline
-set relativenumber
-set showmatch
+set nocompatible "make not compatible with Vi
+set encoding=utf-8 "able to show all characters
+filetype off "force plugins to load correctly
+
+syntax enable
+
+set nu "show line numbers
+set showcmd "show command
+set cursorline "highlight current line 
+set relativenumber "relative number lines
+
+set showmatch "higlights matching brace
 
 " search
-set incsearch
-set hlsearch
-set ignorecase
+set incsearch "search as you type
+set hlsearch "higlight all search result
+set ignorecase "ignore case sensitive
 set smartcase
 
 "colors
 colorscheme atom-dark-256
 
-syntax enable
-filetype plugin on
+filetype plugin on "make pluglins work properly
 
-set tabstop=4
-set softtabstop=4
-set expandtab 
-filetype indent on
-set autoindent
-
-set encoding=utf-8
+"indenting
+set tabstop=4 "width of a tab
+set softtabstop=4 "number of colums for a TAB
+set expandtab "expand TABs to spaces
 
 "latex mapping
 map <F3> :!pdflatex %<CR><CR>
