@@ -186,8 +186,20 @@ snippet item "Itemize"
 \end{itemize}
 endsnippet
 
+snippet i "item"
+\item $0 
+endsnippet
+
 snippet circ "Change label to circ"
 [label=$\circ$]
+endsnippet
+
+snippet und "underline"
+\underline{$0}
+endsnippet
+
+snippet bf "gras"
+\textbf{$0}
 endsnippet
 
 snippet sec "Section"
@@ -245,11 +257,58 @@ snippet sq "\sqrt{}"
 \sqrt{${1:${VISUAL}}} $0
 endsnippet
 
-snippet <= "leq" 
-\leq
+snippet 0 "empty set"
+\emptyset
 endsnippet
 
-snippet >= "geq"
-\geq
+snippet => "implique"
+\Rightarrow
 endsnippet
 
+snippet <= "implique"
+\Leftarrow
+endsnippet
+
+snippet <=> "equiv"
+\Leftrightarrow
+endsnippet
+
+snippet set "set"
+\\{ ${1:} \\}${2:}
+endsnippet
+
+snippet C "subset"
+\subset
+endsnippet
+
+snippet Cr "subset reverse"
+\supset
+endsnippet
+
+snippet in 
+\in
+endsnippet
+
+snippet Nin "not in"
+\notin
+endsnippet
+
+snippet G "Gamma"
+\Gamma
+endsnippet
+
+snippet t "tau"
+\tau
+endsnippet
+
+snippet O "Omega"
+\Omega
+endsnippet
+
+snippet all 
+\forall
+endsnippet
+
+snippet exists
+\exists
+endsnippet 
